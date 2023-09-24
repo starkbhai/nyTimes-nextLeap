@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    color: black;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid hsla(0, 0%, 87.46%, 1);
+}
+
+.footer .heading {
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid hsla(0, 0%, 87.46%, 1);  
+    margin-top: 1px; 
+}
+
+.f-svg{
+    display: block;
+    height: 44px;
+    vertical-align: middle;
+    width: 184px;
+}
+
+.f-go{
+    color: rgb(86, 123, 149);
+        font-family: nyt-franklin, helvetica, arial, sans-serif;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 11px;
+        text-decoration: none;
+}
+
+.footer .content {
+         display: flex;
+        margin-top: 10px;
+        min-width: 600px;
+}
+
+.section-f{
+    flex: 1 1 0%;
+}
+
+.f-h3 {
+    color: rgb(51, 51, 51);
+        font-size: 13px;
+        font-weight: 700;
+        font-family: nyt-franklin, helvetica, arial, sans-serif;
+        height: 25px;
+        line-height: 15px;
+        margin: 0px;
+        text-transform: uppercase;
+        width: 150px;
+}
+.f-ul{
+        list-style: none;
+            margin: 0px;
+            padding: 0px;
+}
+.f-ul-a{
+        color: rgb(0, 0, 0);
+            display: inline-block;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+            width: 150px;
+            font-size: 14px;
+            font-weight: 500;
+            height: 23px;
+            line-height: 16px;
+}
+
+.f-ul-a:hover{
+        cursor: pointer;
+            text-decoration: underline;
+}
+
+.last-sec{
+        border-left: 1px solid rgb(226, 226, 226);
+            flex: 1 1 0%;
+            padding-left: 15px;
+}
+
+.last-sec h3{
+        color: rgb(51, 51, 51);
+            font-size: 13px;
+            font-weight: 700;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            height: 25px;
+            line-height: 15px;
+            margin: 0px;
+            text-transform: uppercase;
+            width: 150px;
+}
+
+.last-s-ul{
+        list-style: none;
+            margin: 0px;
+            padding: 0px;
+}
+
+.last-s-li{
+        margin-bottom: 5px;
+            white-space: nowrap;
+}
+.last-s-a{
+        color: rgb(0, 0, 0);
+            display: inline-block;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+            width: 150px;
+            font-size: 16px;
+            font-weight: 700;
+            height: 25px;
+            line-height: 15px;
+            padding-bottom: 0px;
+}
+
+.last-s-a-svg{
+        display: inline-block;
+            height: 13px;
+            width: 13px;
+            margin-right: 7px;
+            vertical-align: middle;
+}
+
+.last-s-ul-a2{
+        color: rgb(0, 0, 0);
+            display: inline-block;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+            width: 150px;
+            font-size: 11px;
+            font-weight: 500;
+            height: 23px;
+            line-height: 21px;
+}
+.last-s-ul-3{
+    list-style: none;
+        margin: 2px 0px 0px;
+        padding: 10px 0px 0px;
+        border-top: 1px solid rgb(226, 226, 226);
+}
+
+.f-footer{
+        font-size: 11px;
+            text-align: center;
+            padding-bottom: 25px;
+}
+.f-nav{
+    border-top: 1px solid #ebebeb;
+        padding-top: 9px;
+        margin: 0 0 35px;
+}
+.f-h2{
+        border: 0;
+            -webkit-clip: rect(0 0 0 0);
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+}
+
+.f-ul1{
+    list-style: none;
+        margin: 0 0 15px;
+        padding: 0;
+}
+.f-ul2{
+        list-style: none;
+            line-height: 8px;
+            padding: 0;
+}
+.f-ul-li{
+display: inline-block;
+    line-height: 20px;
+    padding: 0 10px;
+}
+.footer-ul-a{
+    color: #666;
+        padding: 10px 0;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        white-space: nowrap;
+       
+}
+
+@media (min-width: 1150px){
+ 
+.f-footer{
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+   
+}
+@media (min-width: 1024px){
+ 
+.f-footer{
+        padding: 0 3% 9px;
+    }
+   
+}
+@media (min-width: 740px){
+ 
+    .li-smartphone{
+        display: none;
+    }
+    .mobileonly{
+        display: none;
+    }
+   
+}
+@media (min-width: 600px){
+ 
+    .f-ul{
+        display: inline-block;
+    }
+    .f-ul2{
+        display: inline-block;
+    }
+   
+}
+
+@media (min-width: 1025px){
+ .h3-mobile{
+    display: none;
+ }
+ .mobile-f-ul{
+    display: none !important;
+ }
+}
+
+@media (max-width: 1024px){
+.h3-main{
+    display: none;
+}
+.f-ul{
+    display: none;
+    background-color: red;
+}
+
+ .footer .content{
+    margin-top: 10px;
+    flex-direction: column;
+ }
+ .mobile-f-ul{
+    display: flex !important;
+    width: 70% !important;
+    flex-wrap: wrap !important;
+    background-color: antiquewhite;
+ }
+ .last-sec{
+    display: none;
+ }
+ .h3-mobile{
+    cursor: pointer;
+        margin: 0px;
+        border-top: 1px solid rgb(235, 235, 235);
+        color: rgb(51, 51, 51);
+        font-family: nyt-franklin, helvetica, arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        height: 44px;
+        letter-spacing: 0.04rem;
+        line-height: 44px;
+        text-transform: uppercase;
+            width: 100%;
+ }
+}
+
+
+/* 
+@media (max-width: 767px) {
+    .footer .content {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .footer {
+        position: unset;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .footer .content,
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+        position: unset;
+    }
+} */

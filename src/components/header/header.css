@@ -1,0 +1,126 @@
+
+.nyt-header{
+    
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px 0px 60px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.header-1{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 100%;
+    text-align: center;
+}
+.header-1 h4{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.hamburger-div{
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 8px 8px;   
+} 
+
+.hamburger-div:hover{
+      -webkit-transition: ease 0.6s;
+        transition: ease 0.6s;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-color: transparent;
+      
+        -webkit-letter-spacing: 0.02em;
+        -moz-letter-spacing: 0.02em;
+        -ms-letter-spacing: 0.02em;
+        letter-spacing: 0.02em;
+     
+        background-color: #F7F7F7;
+}
+
+.hamburger-div img{
+   width: 14px;
+   height: 14px;
+}
+
+.search-form1 {
+
+    margin: 30px 0px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+
+}
+
+
+@media only screen and (min-width: 1024px)  {
+   .submit-button{
+    font-weight: bold;
+    font-size: 10px;
+    height: 33px;
+    padding: 7px 9px 6px;
+    }
+}
+.header3{
+    display: flex;
+    column-gap: 10px;
+}
+
+.header3 .link{
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    transition: all 0.6s ease 0s;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: rgb(86, 123, 149);
+    border: 1px solid rgb(50, 104, 145);
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 8px 12px 8px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.search-input-header{
+        border: 0px;
+        height: 31px;
+        letter-spacing: 0.5px;
+        padding: 1px 10px 0px;
+            border: 1px solid rgb(226, 226, 226);
+}
+.user-icon{
+        display: block;
+            width: 24px;
+            height: 24px;
+            display: none;
+}
+
+
+@media only screen and (max-width: 1022px) {
+    .header3{
+        display: none;
+    }
+    .user-icon{
+        display: block;
+    }
+    .searchicon-div{
+        display: none;
+    }
+    .page-tag{
+        display: none;
+    }
+}

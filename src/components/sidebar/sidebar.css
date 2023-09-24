@@ -1,0 +1,143 @@
+.sidebar-wrapper{
+    background-color: rgb(240, 248, 252);
+        color: rgb(0, 0, 0);
+        display: block;
+        padding: 7px;
+        text-decoration: none;
+        height: 100vh;
+        position: fixed;
+        bottom: 0px;
+        z-index: 50;
+        top: 0px;
+        padding: 12px;
+        width: 170px;
+        transition: all;
+        
+}
+
+.sidebar-val{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+}
+.icon-size{
+        width: 8px;
+        height: 13px;
+}
+
+
+
+.d-block{
+    display: block !important;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.ab-wrapper{
+    /* background-color: yellow; */
+    position: absolute;
+    width: 170px;
+    height: 100vh;
+    z-index: 50;
+    top: 0;
+}
+
+.cross-icon{
+        position: absolute;
+            top: 25px;
+            right: 60px;
+            display: block;
+            height: 16px;
+            width: 16px;
+
+}
+
+.ul-wrapper{
+        columns: 2;
+            margin: 0px;
+            padding: 0px 0px 19px;
+}
+.li-item{
+    text-align: center;
+        line-height: 34px;
+            list-style-type: none;
+}
+
+.sidebar-val-responsive{
+   
+    display: none;
+}
+
+.head-text{
+    font-weight: bolder;
+
+
+}
+
+.search-form{
+    display: none;
+}
+.head-div{
+    display: none;
+}
+
+@media only screen and (max-width: 1022px) {
+    .sidebar-wrapper{
+        position: relative;
+        background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            display: block;
+            text-decoration: none;
+            position: fixed;
+            bottom: 0px;
+            z-index: 50;
+            top: 0px;
+            width: 100vw;
+            transition: all;
+            overflow-y: auto;
+            height: 100%;
+            
+    }
+        .head-div {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            text-align: center;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        }
+
+    .sidebar-val{
+        display: none;
+       
+
+    }
+
+    .sidebar-val-responsive {
+        display: block;
+        margin-top: 20px;
+    }
+
+        .search-form {
+          
+            margin: 30px 0px;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 88%;
+           
+        }
+
+     .search-form .search-input-div{
+        width: 60% !important;
+    }
+
+
+   
+}
