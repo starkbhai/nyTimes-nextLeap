@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import Header from '../header/Header'
 import './newspage.css'
 import Footer from '../footer/Footer';
+import Loading from '../helpComponents/Loading';
 
 // Define an interface for the API response data
 interface NewsData{
@@ -51,10 +52,23 @@ const [showSidebar , setShowSideBar]=useState<boolean>(false);
 const [latest , setLatest]=useState<boolean>(false);
 const [worldNewsData , setWorldNewsData]=useState<NewsData | null>(null);
 const [sliced , setSliced]=useState<number>(19);
+const [loading , setLoading]=useState<boolean>(false);
+const [error , setError]=useState<string | null>(null);
 useEffect(()=>{
+   setLoading(true);
  fetch("https://api.nytimes.com/svc/topstories/v2/world.json?api-key=BNqIRWMGYzF8JPlHgv5pWOlPvsbW6Fly")
- .then((response )=>response.json())
- .then((data)=>setWorldNewsData(data));
+ .then((response )=>{
+   if (!response.ok) {
+      // Handle HTTP error (e.g., 404 Not Found)
+      throw new Error("Network response was not ok");
+    }
+   return response.json();
+ })
+ .then((data)=>{setWorldNewsData(data); setLoading(false);}) .catch((error) => {
+   // Handle any errors that occurred during the fetch
+   setError(error.message);
+   // Optionally, you can set an error state or display an error message to the user.
+ });
 },[])
 
 
@@ -151,7 +165,15 @@ useEffect(()=>{
        </ol>
        </nav>
        </header>
-      
+    
+       
+      {loading ? <Loading /> :
+
+          error ? 
+            <div className="error-alert">
+               <p>Error: {error}</p>
+            </div> :
+      <>
        <div className='f-grid'>
          {worldNewsData?.results?.slice(0,1)?.map((news,idx)=>(
             <div key={`ksju${idx+1}98`} className='g-one' >
@@ -218,23 +240,7 @@ useEffect(()=>{
                ))}
          </div>
        
-       {/* <div className='s-grid'>
-             <div className='s-grid-child'>
-               <div  className='s-one-img-div'><img src='https://static01.nyt.com/images/2023/09/14/multimedia/14spain-soccer01sub-glkm/14spain-soccer01sub-glkm-videoLarge.jpg' /></div>
-                <div className='s-text'>
-                  <p>Players in Spain’s Women’s League Call Off Strike</p>
-                  <p className='s-text-p'>Clambering away from an earthquake’s devastation and death, a family hoped to welcome a single new life.</p>
-                </div>
-             </div>
-             <div className='s-grid-child' ><div  className='s-one-img-div'><img src='https://static01.nyt.com/images/2023/09/14/multimedia/14spain-soccer01sub-glkm/14spain-soccer01sub-glkm-videoLarge.jpg' /></div>
-               <p className='s-text'>Players in Spain’s Women’s League Call Off Strike</p></div>
-             <div className='s-grid-child' ><div  className='s-one-img-div'><img src='https://static01.nyt.com/images/2023/09/14/multimedia/14spain-soccer01sub-glkm/14spain-soccer01sub-glkm-videoLarge.jpg' /></div>
-               <p className='s-text'>Players in Spain’s Women’s League Call Off Strike</p></div>
-             <div className='s-grid-child' ><div  className='s-one-img-div'><img src='https://static01.nyt.com/images/2023/09/14/multimedia/14spain-soccer01sub-glkm/14spain-soccer01sub-glkm-videoLarge.jpg' /></div>
-               <p className='s-text'>Players in Spain’s Women’s League Call Off Strike</p></div>
-             <div className='s-grid-child' ><div  className='s-one-img-div'><img src='https://static01.nyt.com/images/2023/09/14/multimedia/14spain-soccer01sub-glkm/14spain-soccer01sub-glkm-videoLarge.jpg' /></div>
-               <p className='s-text'>Players in Spain’s Women’s League Call Off Strike</p></div>
-       </div> */}
+      
 
        <div className='third'>
            <div className='th-search'>
@@ -289,6 +295,7 @@ useEffect(()=>{
     
 
      <Footer />
+        </> }
     </div>
     </div>
   )
